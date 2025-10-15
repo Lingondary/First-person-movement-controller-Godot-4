@@ -1,0 +1,435 @@
+[gd_scene load_steps=23 format=3 uid="uid://d0slst67yxbpq"]
+
+[ext_resource type="Shader" uid="uid://d11ncev7885fg" path="res://Shaders/tile_shader_1.gdshader" id="1_843vu"]
+[ext_resource type="PackedScene" uid="uid://bkc33vu8jlnaf" path="res://Scenes/Player/player.tscn" id="2_l5tbf"]
+
+[sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_l5tbf"]
+
+[sub_resource type="Sky" id="Sky_qtk04"]
+sky_material = SubResource("PhysicalSkyMaterial_l5tbf")
+
+[sub_resource type="Environment" id="Environment_jqgel"]
+background_mode = 2
+sky = SubResource("Sky_qtk04")
+ssil_enabled = true
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_l5tbf"]
+render_priority = 0
+shader = ExtResource("1_843vu")
+shader_parameter/world_uv = true
+shader_parameter/object_uv = false
+shader_parameter/object_uv_scale = Vector2(1, 1)
+shader_parameter/preset_color = 0
+shader_parameter/base_color = Color(0, 0, 0, 1)
+shader_parameter/metalic = 0.25
+shader_parameter/roughness = 0.75
+shader_parameter/grid_scale = 0.405
+shader_parameter/grid_width = 0.0010000000475
+shader_parameter/grid_color = Color(0.8, 0.8, 0.8, 1)
+shader_parameter/inside_scale = 1.0
+shader_parameter/inside_width = 0.01
+shader_parameter/inside_color = Color(0.8, 0.8, 0.8, 0.8)
+shader_parameter/checkered = true
+shader_parameter/sub_checkered_grid = true
+shader_parameter/checkered_color = Color(0.4700758, 0.47007585, 0.47007567, 1)
+shader_parameter/checkered_blend_color = 0.1
+shader_parameter/use_inside_uv = false
+shader_parameter/use_albedo_color = false
+shader_parameter/albedo_alpha = 0.5
+
+[sub_resource type="BoxMesh" id="BoxMesh_qtk04"]
+material = SubResource("ShaderMaterial_l5tbf")
+size = Vector3(150, 0, 194.84)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_843vu"]
+size = Vector3(50, 0.48877, 79)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jqgel"]
+render_priority = 0
+shader = ExtResource("1_843vu")
+shader_parameter/world_uv = false
+shader_parameter/object_uv = false
+shader_parameter/object_uv_scale = Vector2(1, 1)
+shader_parameter/preset_color = 0
+shader_parameter/base_color = Color(0.025439253, 0.11950449, 0.09453831, 1)
+shader_parameter/metalic = 0.25
+shader_parameter/roughness = 0.75
+shader_parameter/grid_scale = 0.395
+shader_parameter/grid_width = 0.01999999955296
+shader_parameter/grid_color = Color(0.5, 0.5, 0.5, 1)
+shader_parameter/inside_scale = 1.0
+shader_parameter/inside_width = 0.014000000665
+shader_parameter/inside_color = Color(0.8, 0.8, 0.8, 0.8)
+shader_parameter/checkered = true
+shader_parameter/sub_checkered_grid = true
+shader_parameter/checkered_color = Color(0.094838046, 0.27570227, 0.22634855, 1)
+shader_parameter/checkered_blend_color = 1.0
+shader_parameter/use_inside_uv = false
+shader_parameter/use_albedo_color = false
+shader_parameter/albedo_alpha = 0.5
+
+[sub_resource type="BoxMesh" id="BoxMesh_l5tbf"]
+material = SubResource("ShaderMaterial_jqgel")
+size = Vector3(5, 5, 5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jqgel"]
+size = Vector3(5, 5, 5)
+
+[sub_resource type="PrismMesh" id="PrismMesh_jqgel"]
+material = SubResource("ShaderMaterial_jqgel")
+left_to_right = 0.0
+size = Vector3(4.93, 7.515, 3.515)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_l5tbf"]
+data = PackedVector3Array(-2.465, 3.7575, 1.7574999, 2.465, -3.7575, 1.7574999, -2.465, -3.7575, 1.7574999, -2.465, 3.7575, -1.7574999, -2.465, -3.7575, -1.7574999, 2.465, -3.7575, -1.7574999, -2.465, 3.7575, 1.7574999, -2.465, 3.7575, -1.7574999, 2.465, -3.7575, 1.7574999, -2.465, 3.7575, -1.7574999, 2.465, -3.7575, -1.7574999, 2.465, -3.7575, 1.7574999, -2.465, 3.7575, -1.7574999, -2.465, 3.7575, 1.7574999, -2.465, -3.7575, -1.7574999, -2.465, 3.7575, 1.7574999, -2.465, -3.7575, 1.7574999, -2.465, -3.7575, -1.7574999, -2.465, -3.7575, 1.7574999, 2.465, -3.7575, 1.7574999, -2.465, -3.7575, -1.7574999, 2.465, -3.7575, 1.7574999, 2.465, -3.7575, -1.7574999, -2.465, -3.7575, -1.7574999)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qtk04"]
+render_priority = 0
+shader = ExtResource("1_843vu")
+shader_parameter/world_uv = false
+shader_parameter/object_uv = false
+shader_parameter/object_uv_scale = Vector2(1, 1)
+shader_parameter/preset_color = 0
+shader_parameter/base_color = Color(0.5176471, 0.11764706, 0.09411765, 1)
+shader_parameter/metalic = 0.25
+shader_parameter/roughness = 0.75
+shader_parameter/grid_scale = 0.395
+shader_parameter/grid_width = 0.01999999955296
+shader_parameter/grid_color = Color(0.8, 0.8, 0.8, 1)
+shader_parameter/inside_scale = 1.0
+shader_parameter/inside_width = 0.014000000665
+shader_parameter/inside_color = Color(0.8, 0.8, 0.8, 0.8)
+shader_parameter/checkered = true
+shader_parameter/sub_checkered_grid = true
+shader_parameter/checkered_color = Color(0.23597464, 0.033070054, 0.023264864, 1)
+shader_parameter/checkered_blend_color = 1.0
+shader_parameter/use_inside_uv = false
+shader_parameter/use_albedo_color = false
+shader_parameter/albedo_alpha = 0.5
+
+[sub_resource type="BoxMesh" id="BoxMesh_jqgel"]
+material = SubResource("ShaderMaterial_qtk04")
+size = Vector3(2.5, 2.5, 2.5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_l5tbf"]
+size = Vector3(2.5, 2.5, 2.5)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_uruoy"]
+render_priority = 0
+shader = ExtResource("1_843vu")
+shader_parameter/world_uv = false
+shader_parameter/object_uv = false
+shader_parameter/object_uv_scale = Vector2(1, 1)
+shader_parameter/preset_color = 0
+shader_parameter/base_color = Color(0.45437264, 0.18430603, 0.24222082, 1)
+shader_parameter/metalic = 0.25
+shader_parameter/roughness = 0.75
+shader_parameter/grid_scale = 0.395
+shader_parameter/grid_width = 0.01999999955296
+shader_parameter/grid_color = Color(0.8, 0.8, 0.8, 1)
+shader_parameter/inside_scale = 1.0
+shader_parameter/inside_width = 0.014000000665
+shader_parameter/inside_color = Color(0.8, 0.8, 0.8, 0.8)
+shader_parameter/checkered = true
+shader_parameter/sub_checkered_grid = true
+shader_parameter/checkered_color = Color(0.650247, 0.28859502, 0.36506844, 1)
+shader_parameter/checkered_blend_color = 1.0
+shader_parameter/use_inside_uv = false
+shader_parameter/use_albedo_color = false
+shader_parameter/albedo_alpha = 0.5
+
+[sub_resource type="BoxMesh" id="BoxMesh_fdtbp"]
+material = SubResource("ShaderMaterial_uruoy")
+size = Vector3(10.145, 0.66, 2.5)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_j5ciw"]
+data = PackedVector3Array(-5.0724998, 0.32999998, 1.25, 5.0724998, 0.32999998, 1.25, -5.0724998, -0.32999998, 1.25, 5.0724998, 0.32999998, 1.25, 5.0724998, -0.32999998, 1.25, -5.0724998, -0.32999998, 1.25, 5.0724998, 0.32999998, -1.25, -5.0724998, 0.32999998, -1.25, 5.0724998, -0.32999998, -1.25, -5.0724998, 0.32999998, -1.25, -5.0724998, -0.32999998, -1.25, 5.0724998, -0.32999998, -1.25, 5.0724998, 0.32999998, 1.25, 5.0724998, 0.32999998, -1.25, 5.0724998, -0.32999998, 1.25, 5.0724998, 0.32999998, -1.25, 5.0724998, -0.32999998, -1.25, 5.0724998, -0.32999998, 1.25, -5.0724998, 0.32999998, -1.25, -5.0724998, 0.32999998, 1.25, -5.0724998, -0.32999998, -1.25, -5.0724998, 0.32999998, 1.25, -5.0724998, -0.32999998, 1.25, -5.0724998, -0.32999998, -1.25, 5.0724998, 0.32999998, 1.25, -5.0724998, 0.32999998, 1.25, 5.0724998, 0.32999998, -1.25, -5.0724998, 0.32999998, 1.25, -5.0724998, 0.32999998, -1.25, 5.0724998, 0.32999998, -1.25, -5.0724998, -0.32999998, 1.25, 5.0724998, -0.32999998, 1.25, -5.0724998, -0.32999998, -1.25, 5.0724998, -0.32999998, 1.25, 5.0724998, -0.32999998, -1.25, -5.0724998, -0.32999998, -1.25)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_xtb4h"]
+render_priority = 0
+shader = ExtResource("1_843vu")
+shader_parameter/world_uv = false
+shader_parameter/object_uv = false
+shader_parameter/object_uv_scale = Vector2(1, 1)
+shader_parameter/preset_color = 0
+shader_parameter/base_color = Color(0.2364639, 0.2435914, 0.23666763, 1)
+shader_parameter/metalic = 0.25
+shader_parameter/roughness = 0.75
+shader_parameter/grid_scale = 0.395
+shader_parameter/grid_width = 0.01999999955296
+shader_parameter/grid_color = Color(0.5, 0.5, 0.5, 1)
+shader_parameter/inside_scale = 1.0
+shader_parameter/inside_width = 0.014000000665
+shader_parameter/inside_color = Color(0.8, 0.8, 0.8, 0.8)
+shader_parameter/checkered = true
+shader_parameter/sub_checkered_grid = true
+shader_parameter/checkered_color = Color(0.4470988, 0.39319682, 0.18146202, 1)
+shader_parameter/checkered_blend_color = 1.0
+shader_parameter/use_inside_uv = false
+shader_parameter/use_albedo_color = false
+shader_parameter/albedo_alpha = 0.5
+
+[sub_resource type="BoxMesh" id="BoxMesh_uruoy"]
+material = SubResource("ShaderMaterial_xtb4h")
+size = Vector3(55, 19.25, 5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fdtbp"]
+size = Vector3(55, 19.14, 5)
+
+[node name="TestArea" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_jqgel")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="WorldEnvironment"]
+transform = Transform3D(1, 0, 0, 0, -0.4351368, 0.90036434, 0, -0.90036434, -0.4351368, 0, 21.209932, 0)
+light_energy = 6.04
+shadow_enabled = true
+
+[node name="Player" parent="." instance=ExtResource("2_l5tbf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.035205, -6.201516)
+
+[node name="Miscellaneous" type="Node3D" parent="."]
+
+[node name="Floor" type="StaticBody3D" parent="Miscellaneous" groups=["Floor"]]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Miscellaneous/Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.006848216, -2.3841858e-07, 0.0023579597)
+mesh = SubResource("BoxMesh_qtk04")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Miscellaneous/Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.255615, -0.5)
+shape = SubResource("BoxShape3D_843vu")
+metadata/_edit_lock_ = true
+
+[node name="Blocks" type="Node3D" parent="Miscellaneous"]
+
+[node name="Block" type="StaticBody3D" parent="Miscellaneous/Blocks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.94028425, -6)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Miscellaneous/Blocks/Block"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4474659, 0.04314804)
+mesh = SubResource("BoxMesh_l5tbf")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Miscellaneous/Blocks/Block"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4532652, 0.047759056)
+shape = SubResource("BoxShape3D_jqgel")
+metadata/_edit_lock_ = true
+
+[node name="Block2" type="StaticBody3D" parent="Miscellaneous/Blocks"]
+transform = Transform3D(0.9181424, 0.3962507, 0, -0.3962507, 0.9181424, 0, 0, 0, 1, -6.328061, -0.2885189, -6)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Miscellaneous/Blocks/Block2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4474659, 0.04314804)
+mesh = SubResource("BoxMesh_l5tbf")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Miscellaneous/Blocks/Block2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4532652, 0.047759056)
+shape = SubResource("BoxShape3D_jqgel")
+metadata/_edit_lock_ = true
+
+[node name="Triangle" type="StaticBody3D" parent="Miscellaneous/Blocks"]
+transform = Transform3D(2.9802322e-08, 0.9999999, -8.742278e-08, 0.9999999, -2.9802322e-08, 0, -2.6054018e-15, -8.742277e-08, -1, 4.805629, 2.4293976, -6.676408)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Miscellaneous/Blocks/Triangle"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4474659, 0.04314804)
+mesh = SubResource("PrismMesh_jqgel")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Miscellaneous/Blocks/Triangle"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4474659, 0.04314804)
+shape = SubResource("ConcavePolygonShape3D_l5tbf")
+
+[node name="Block3" type="StaticBody3D" parent="Miscellaneous/Blocks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.9925156, -1.7724881, -1)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Miscellaneous/Blocks/Block3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4474659, 0.04314804)
+mesh = SubResource("BoxMesh_l5tbf")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Miscellaneous/Blocks/Block3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4532652, 0.047759056)
+shape = SubResource("BoxShape3D_jqgel")
+metadata/_edit_lock_ = true
+
+[node name="Block4" type="StaticBody3D" parent="Miscellaneous/Blocks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.9925156, -2.9649482, 4)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Miscellaneous/Blocks/Block4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4474659, 0.04314804)
+mesh = SubResource("BoxMesh_l5tbf")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Miscellaneous/Blocks/Block4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4532652, 0.047759056)
+shape = SubResource("BoxShape3D_jqgel")
+metadata/_edit_lock_ = true
+
+[node name="Block5" type="StaticBody3D" parent="Miscellaneous/Blocks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.218575, 2.585176, -0.18153334)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Miscellaneous/Blocks/Block5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4474659, 0.04314804)
+mesh = SubResource("BoxMesh_jqgel")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Miscellaneous/Blocks/Block5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4532652, 0.047759056)
+shape = SubResource("BoxShape3D_l5tbf")
+metadata/_edit_lock_ = true
+
+[node name="Block6" type="StaticBody3D" parent="Miscellaneous/Blocks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.218575, 2.585176, -0.18153334)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Miscellaneous/Blocks/Block6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4474659, 0.04314804)
+mesh = SubResource("BoxMesh_jqgel")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Miscellaneous/Blocks/Block6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4532652, 0.047759056)
+shape = SubResource("BoxShape3D_l5tbf")
+metadata/_edit_lock_ = true
+
+[node name="Block7" type="StaticBody3D" parent="Miscellaneous/Blocks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.218575, 3.585176, 3.8184667)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Miscellaneous/Blocks/Block7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4474659, 0.04314804)
+mesh = SubResource("BoxMesh_jqgel")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Miscellaneous/Blocks/Block7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4532652, 0.047759056)
+shape = SubResource("BoxShape3D_l5tbf")
+metadata/_edit_lock_ = true
+
+[node name="Block8" type="StaticBody3D" parent="Miscellaneous/Blocks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.218575, 4.585176, 3.8184667)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Miscellaneous/Blocks/Block8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4474659, 0.04314804)
+mesh = SubResource("BoxMesh_jqgel")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Miscellaneous/Blocks/Block8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4532652, 0.047759056)
+shape = SubResource("BoxShape3D_l5tbf")
+metadata/_edit_lock_ = true
+
+[node name="Block9" type="StaticBody3D" parent="Miscellaneous/Blocks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.218575, 0.37548852, 12.761273)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Miscellaneous/Blocks/Block9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4474659, 0.04314804)
+mesh = SubResource("BoxMesh_fdtbp")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Miscellaneous/Blocks/Block9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4474658, 0.04314804)
+shape = SubResource("ConcavePolygonShape3D_j5ciw")
+metadata/_edit_lock_ = true
+
+[node name="Block10" type="StaticBody3D" parent="Miscellaneous/Blocks"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0.218575, 0.41437626, 12.693595)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Miscellaneous/Blocks/Block10"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4474659, 0.04314804)
+mesh = SubResource("BoxMesh_fdtbp")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Miscellaneous/Blocks/Block10"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4474659, 0.04314804)
+shape = SubResource("ConcavePolygonShape3D_j5ciw")
+metadata/_edit_lock_ = true
+
+[node name="Block11" type="StaticBody3D" parent="Miscellaneous/Blocks"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0.218575, 0.485176, 12.936004)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Miscellaneous/Blocks/Block11"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4474659, 0.04314804)
+mesh = SubResource("BoxMesh_fdtbp")
+skeleton = NodePath("../../Block11")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Miscellaneous/Blocks/Block11"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4474659, 0.04314804)
+shape = SubResource("ConcavePolygonShape3D_j5ciw")
+
+[node name="Walls" type="Node3D" parent="Miscellaneous"]
+
+[node name="Wall" type="StaticBody3D" parent="Miscellaneous/Walls"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.086967, 20.637035)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Miscellaneous/Walls/Wall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4474659, 0.04314804)
+mesh = SubResource("BoxMesh_uruoy")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Miscellaneous/Walls/Wall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4532652, 0.047759056)
+shape = SubResource("BoxShape3D_fdtbp")
+metadata/_edit_lock_ = true
+
+[node name="Wall2" type="StaticBody3D" parent="Miscellaneous/Walls"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.086967, -18.362965)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Miscellaneous/Walls/Wall2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4474659, 0.04314804)
+mesh = SubResource("BoxMesh_uruoy")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Miscellaneous/Walls/Wall2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4532652, 0.047759056)
+shape = SubResource("BoxShape3D_fdtbp")
+metadata/_edit_lock_ = true
+
+[node name="Wall3" type="StaticBody3D" parent="Miscellaneous/Walls"]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 19.267805, 2.086967, 0.24485493)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Miscellaneous/Walls/Wall3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4474659, 0.04314804)
+mesh = SubResource("BoxMesh_uruoy")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Miscellaneous/Walls/Wall3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4532652, 0.047759056)
+shape = SubResource("BoxShape3D_fdtbp")
+metadata/_edit_lock_ = true
+
+[node name="Wall4" type="StaticBody3D" parent="Miscellaneous/Walls"]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -17.732195, 2.086967, 0.24485493)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Miscellaneous/Walls/Wall4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4474659, 0.04314804)
+mesh = SubResource("BoxMesh_uruoy")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Miscellaneous/Walls/Wall4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4532652, 0.047759056)
+shape = SubResource("BoxShape3D_fdtbp")
+metadata/_edit_lock_ = true
+
+[node name="Lights" type="Node3D" parent="Miscellaneous"]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Miscellaneous/Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.407227, 5, -13)
+light_energy = 11.541
+light_size = 18.375
+omni_range = 11.0
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="Miscellaneous/Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.400728, 5, -13)
+light_energy = 11.541
+light_size = 18.375
+omni_range = 11.0
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="Miscellaneous/Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.81830025, 1.50102, 12.806003)
+light_energy = 0.906
+light_size = 18.375
+omni_range = 4.8267927

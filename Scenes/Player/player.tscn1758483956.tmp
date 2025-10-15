@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://bkc33vu8jlnaf"]
+
+[ext_resource type="Script" uid="uid://2qq5oxeidla8" path="res://Scripts/input_handler.gd" id="1_uvnfx"]
+[ext_resource type="Script" uid="uid://qks15tb53xwx" path="res://Scripts/movement_controller.gd" id="2_a3d8c"]
+[ext_resource type="Script" uid="uid://dg5k0htxheo7l" path="res://Scripts/main_camera.gd" id="3_xpcdj"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_xpcdj"]
+
+[node name="Player" type="CharacterBody3D"]
+
+[node name="InputHandler" type="Node" parent="."]
+script = ExtResource("1_uvnfx")
+
+[node name="MovementController" type="Node" parent="." node_paths=PackedStringArray("player", "input_handler", "main_camera")]
+script = ExtResource("2_a3d8c")
+player = NodePath("..")
+input_handler = NodePath("../InputHandler")
+main_camera = NodePath("../CameraPivot/MainCamera")
+
+[node name="CameraPivot" type="Node3D" parent="."]
+
+[node name="MainCamera" type="Camera3D" parent="CameraPivot" node_paths=PackedStringArray("input_handler", "movement_controller", "player")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 1.7, 0)
+script = ExtResource("3_xpcdj")
+input_handler = NodePath("../../InputHandler")
+movement_controller = NodePath("../../MovementController")
+player = NodePath("../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_xpcdj")

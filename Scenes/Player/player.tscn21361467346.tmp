@@ -1,0 +1,54 @@
+[gd_scene load_steps=6 format=3 uid="uid://bkc33vu8jlnaf"]
+
+[ext_resource type="Script" uid="uid://2qq5oxeidla8" path="res://Scripts/input_handler.gd" id="1_uvnfx"]
+[ext_resource type="Script" uid="uid://qks15tb53xwx" path="res://Scripts/movement_controller.gd" id="2_a3d8c"]
+[ext_resource type="Script" uid="uid://dg5k0htxheo7l" path="res://Scripts/main_camera.gd" id="3_xpcdj"]
+[ext_resource type="Script" uid="uid://b4gf7ka7h6vn" path="res://Scenes/Player/camera_3d.gd" id="4_mtuoh"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_xpcdj"]
+
+[node name="Player" type="CharacterBody3D"]
+
+[node name="InputHandler" type="Node" parent="."]
+script = ExtResource("1_uvnfx")
+
+[node name="MovementController" type="Node" parent="." node_paths=PackedStringArray("player", "input_handler", "main_camera", "character_collision", "raycast")]
+script = ExtResource("2_a3d8c")
+player = NodePath("..")
+input_handler = NodePath("../InputHandler")
+main_camera = NodePath("../CameraPivot/MainCamera")
+character_collision = NodePath("../CollisionShape3D")
+raycast = NodePath("../CrouchRaycast")
+
+[node name="CameraPivot" type="Node3D" parent="."]
+
+[node name="MainCamera" type="Camera3D" parent="CameraPivot" node_paths=PackedStringArray("input_handler", "movement_controller", "player")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 1.7, 0)
+script = ExtResource("3_xpcdj")
+input_handler = NodePath("../../InputHandler")
+movement_controller = NodePath("../../MovementController")
+player = NodePath("../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_xpcdj")
+
+[node name="CrouchRaycast" type="RayCast3D" parent="."]
+transform = Transform3D(40, -1.5099582e-07, 6.039832e-06, -6.039832e-06, -1, -3.4969112e-06, 6.0398324e-06, 8.7422755e-08, -40, 0, 1.7324579, 0)
+target_position = Vector3(0, -0.335, 0)
+hit_from_inside = true
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="."]
+offset_right = 577.0
+offset_bottom = 512.0
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
+handle_input_locally = false
+size = Vector2i(577, 512)
+render_target_update_mode = 4
+
+[node name="CanvasLayer" type="CanvasLayer" parent="SubViewportContainer/SubViewport"]
+
+[node name="Camera3D" type="Camera3D" parent="SubViewportContainer/SubViewport/CanvasLayer"]
+transform = Transform3D(1, 0, 0, 0, 0.9659259, 0.25881907, 0, -0.25881907, 0.9659258, 0, 2, 2)
+script = ExtResource("4_mtuoh")
