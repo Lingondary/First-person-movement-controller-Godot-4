@@ -12,7 +12,6 @@ This project includes a demo scene, fully functional input system, and scripts f
 - Head bobbing animation  
 - Camera tilt and landing/jump effects  
 - Adjustable sensitivity, acceleration, and movement speeds  
-- Obstacle check when standing up from crouch  
 
 ---
 
