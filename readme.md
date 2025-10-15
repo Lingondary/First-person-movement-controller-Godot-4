@@ -16,19 +16,6 @@ This project includes a demo scene, fully functional input system, and scripts f
 
 ---
 
-## Project Structure
-
-📦 your_project/
-├── scenes/
-│ └── demo_scene.tscn # Demo scene
-├── scripts/
-│ ├── InputHandler.gd # Handles player input
-│ ├── MovementController.gd # Handles player movement and rotation
-│ └── CameraController.gd # Handles camera movement and effects
-└── README.md
-
----
-
 ## Scripts Overview
 
 ### `InputHandler.gd`
