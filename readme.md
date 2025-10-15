@@ -1,4 +1,4 @@
-# First Person Controller (Godot 4)
+# First Person Controller
 
 A simple **First Person Controller** made for **Godot 4**.  
 This project includes a demo scene, fully functional input system, and scripts for smooth first-person movement and camera behavior.
