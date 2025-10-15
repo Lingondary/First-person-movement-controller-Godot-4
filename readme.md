@@ -1,4 +1,4 @@
-# 🎮 First Person Controller (Godot 4)
+# First Person Controller (Godot 4)
 
 A simple **First Person Controller** made for **Godot 4**.  
 This project includes a demo scene, fully functional input system, and scripts for smooth first-person movement and camera behavior.
@@ -56,7 +56,7 @@ Add the following input actions in **Project Settings → Input Map**:
 
 ---
 
-## 📜 License
+## License
 
 This project is licensed under the **MIT License** — free to use, modify, and distribute in your own projects.
 
